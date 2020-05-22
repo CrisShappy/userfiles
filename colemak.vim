@@ -27,10 +27,10 @@
     nnoremap Y W|xnoremap Y W|onoremap Y W|
     cnoremap <C-L> <C-Left>
     cnoremap <C-Y> <C-Right>
-    cnoremap <C-N> <C-E>
-    cnoremap <C-E> <C-Y>
-    nnoremap <C-N> <C-E>|xnoremap <C-N> <C-E>|onoremap <C-N> <C-E>|
-    nnoremap <C-E> <C-Y>|xnoremap <C-E> <C-Y>|onoremap <C-E> <C-Y>|
+    cnoremap <C-N> <C-E> " this remaps scroll down
+    cnoremap <C-E> <C-Y> " this remaps scroll up
+    nnoremap <C-N> <C-E>|xnoremap <C-N> <C-E>|onoremap <C-N> <C-E>| " this remaps scroll down
+    nnoremap <C-E> <C-Y>|xnoremap <C-E> <C-Y>|onoremap <C-E> <C-Y>| " this remaps scroll up
 " }}}
 " inSert/Replace/append (T) {{{
     nnoremap s i|
