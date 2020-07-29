@@ -6,11 +6,7 @@ set relativenumber number
 noremap t j
 noremap n k
 noremap s l
-noremap m w
-noremap a v
-noremap A V
+noremap m e
 noremap U <C-R>
-noremap e o
-noremap E O
-noremap o a
-noremap O A
+noremap e v
+noremap E V
