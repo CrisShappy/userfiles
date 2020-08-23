@@ -21,6 +21,7 @@ alias ssn='sudo shutdown now'
 alias sr='sudo reboot'
 alias df='df -h'
 alias free='free -m'
+alias please='sudo !!'
 
 ## pacman commands
 alias update='sudo pacman -Syu'
