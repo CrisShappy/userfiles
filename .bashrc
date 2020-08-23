@@ -58,7 +58,7 @@ alias .3='cd ../../..'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 
-PS1='[\u@\h \W]\$ '
+PS1="\[\e[33m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[35m\]@\[\e[m\]\[\e[34m\]\h\[\e[m\] \[\e[32m\]\W\[\e[m\]\[\e[33m\]]\[\e[m\]\\$ "
 
 ## The Magical Archive Extractor
 ex ()
