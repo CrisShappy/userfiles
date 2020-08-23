@@ -29,6 +29,7 @@ alias force='sudo pacman -Syyu'
 alias dl='sudo pacman -S'
 alias yayup='yay -Sua'
 alias unlock='sudo rm /var/lib/pacman/db.lck'
+alias sp='pacman -Ss'
 
 ## git shortcuts
 alias clone='git clone'
