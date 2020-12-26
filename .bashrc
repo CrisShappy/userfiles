@@ -7,22 +7,31 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export HISTCONTROL=ignoredups:erasedups
+export EDITOR='vim'
+export MAKEFLAGS="-j32 -l31"
 
 ## ls shortcuts & overwriting ls to exa 
-alias ls='exa --color=always'
-alias la='exa -a  --color=always'
-alias ll='exa -l  --color=always'
-alias lla='exa -la --color=always'
+alias ls='exa --color=always --group-directories-first'
+alias la='exa -a  --color=always --group-directories-first'
+alias ll='exa -l  --color=always --group-directories-first'
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias lla='exa -la --color=always --group-directories-first'
 
 ## general shortcuts
 alias grep='grep --color=auto'
+alias ping='ping -c 3'
 alias bat='cat /sys/class/power_supply/BAT0/capacity'
 alias ssn='sudo shutdown now'
 alias sr='sudo reboot'
+alias top='htop'
 alias df='df -h'
 alias free='free -m'
+alias fmpv='mpv --fs'
+alias nvmpv='mpv --no-video'
 
 ## pacman commands
+alias pacman='sudo pacman'
 alias update='sudo pacman -Syu'
 alias force='sudo pacman -Syyu'
 alias dl='sudo pacman -S'
@@ -59,7 +68,7 @@ alias .3='cd ../../..'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 
-PS1="\[\e[33m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[35m\]@\[\e[m\]\[\e[34m\]\h\[\e[m\] \[\e[32m\]\W\[\e[m\]\[\e[33m\]]\[\e[m\]\\$ "
+PS1="\[\e[33m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[35m\]\h\[\e[m\] \[\e[m\]\W\[\e[m\]\[\e[33m\]]\[\e[m\]\[\e[32m\]\\$\[\e[m\] "
 
 ## The Magical Archive Extractor
 ex ()
@@ -94,4 +103,4 @@ echo -E " (/ /\_#oo#_/\ \)"
 echo -E "  \/\  ####  /\/"
 echo -E "       '##'"
 echo 
-echo 'Welcome Sourcerer!'
+echo 'Welcome Wizard!'
