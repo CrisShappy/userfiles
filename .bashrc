@@ -9,14 +9,13 @@
 
 export HISTCONTROL=ignoredups:erasedups
 export EDITOR='vim'
-export MAKEFLAGS="-j32 -l31"
+export MAKEFLAGS="-j17 -l16"
 
 ## ls shortcuts & overwriting ls to exa 
-alias ls='exa --color=always --group-directories-first'
+alias ls='exa -la --color=always --group-directories-first'
 alias la='exa -a  --color=always --group-directories-first'
 alias ll='exa -l  --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias lla='exa -la --color=always --group-directories-first'
 
 ## general shortcuts
 alias grep='grep --color=auto'
@@ -28,16 +27,17 @@ alias top='htop'
 alias df='df -h'
 alias free='free -m'
 alias fmpv='mpv --fs'
-alias nvmpv='mpv --no-video'
+alias nmpv='mpv --no-video'
+alias dlmp3='youtube-dl --extract-audio --audio-format mp3'
+alias gpgkey='gpg --list-secret-keys --keyid-format LONG'
 
 ## pacman commands
-alias pacman='sudo pacman'
-alias update='sudo pacman -Syu'
-alias force='sudo pacman -Syyu'
-alias dl='sudo pacman -S'
+alias sp='pacman -Ss'
+alias update='doas pacman -Syu'
+alias force='doas pacman -Syyu'
+alias dl='doas pacman -S'
 alias yayup='yay -Sua'
 alias unlock='sudo rm /var/lib/pacman/db.lck'
-alias sp='pacman -Ss'
 
 ## git shortcuts
 alias clone='git clone'
