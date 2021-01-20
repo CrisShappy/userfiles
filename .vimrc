@@ -14,6 +14,16 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap < <><left>
+inoremap > <><left>
+"""inoremap {<CR> {<CR>}<ESC>O
+"""inoremap {;<CR> {<CR>};<ESC>O
+
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
 cnoreabbrev Qall! qall!
@@ -33,6 +43,7 @@ Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'eagletmt/neco-ghc'
 Plug 'dag/vim2hs'
 Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'vim-scripts/grep.vim'
 call plug#end()
 
 colorscheme one
