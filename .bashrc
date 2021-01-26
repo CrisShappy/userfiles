@@ -11,7 +11,7 @@ export HISTCONTROL=ignoredups:erasedups
 export EDITOR='vim'
 export MAKEFLAGS="-j17 -l16"
 
-## ls shortcuts & overwriting ls to exa 
+## ls shortcuts & overwriting ls to exa
 alias ls='exa -la --color=always --group-directories-first'
 alias la='exa -a  --color=always --group-directories-first'
 alias ll='exa -l  --color=always --group-directories-first'
@@ -20,8 +20,8 @@ alias lt='exa -aT --color=always --group-directories-first' # tree listing
 ## general shortcuts
 alias grep='grep --color=auto'
 alias ping='ping -c 3'
-alias bat='cat /sys/class/power_supply/BAT0/capacity'
-alias ssn='sudo shutdown now'
+#alias bat='cat /sys/class/power_supply/BAT0/capacity'
+alias sn='sudo shutdown now'
 alias sr='sudo reboot'
 alias top='htop'
 alias df='df -h'
@@ -30,6 +30,7 @@ alias fmpv='mpv --fs'
 alias nmpv='mpv --no-video'
 alias dlmp3='youtube-dl --extract-audio --audio-format mp3'
 alias gpgkey='gpg --list-secret-keys --keyid-format LONG'
+alias g='git'
 
 ## pacman commands
 alias sp='pacman -Ss'
@@ -40,18 +41,18 @@ alias yayup='yay -Sua'
 alias unlock='sudo rm /var/lib/pacman/db.lck'
 
 ## git shortcuts
-alias clone='git clone'
-alias pull='git pull origin'
-alias push='git push origin'
-alias commit='git commit -m'
-alias checkout='git checkout'
-alias fetch='git fetch'
-alias branch='git branch'
-alias status='git status'
-alias tag='git tag'
-alias add='git add'
-alias addup='git add -u'
-alias addall='git add .'
+# alias clone='git clone'
+# alias pull='git pull origin'
+# alias push='git push origin'
+# alias commit='git commit -m'
+# alias checkout='git checkout'
+# alias fetch='git fetch'
+# alias branch='git branch'
+# alias status='git status'
+# alias tag='git tag'
+# alias add='git add'
+# alias addup='git add -u'
+# alias addall='git add .'
 
 ## find top RAM eaters
 alias psmem='ps auxf | sort -nr -k 4'
@@ -87,7 +88,7 @@ ex ()
 		*.Z)         uncompress $1;;
 		*.7z)        7z x $1      ;;
 		*.deb)       ar x $1      ;;
-		*.tar.xz)    tar xf $1    ;;	
+		*.tar.xz)    tar xf $1    ;;
 		*.tar.zst)   unzstd $1    ;;
 		*)           echo "'$1' cannot be extracted via ex()" ;;
 	esac
@@ -102,5 +103,5 @@ echo -E "  //\  | \   /\\"
 echo -E " (/ /\_#oo#_/\ \)"
 echo -E "  \/\  ####  /\/"
 echo -E "       '##'"
-echo 
+echo
 echo 'Welcome Wizard!'
