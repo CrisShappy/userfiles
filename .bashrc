@@ -8,7 +8,7 @@
 [[ $- != *i* ]] && return
 
 export HISTCONTROL=ignoredups:erasedups
-export EDITOR='vim'
+export EDITOR='nvim'
 export MAKEFLAGS="-j17 -l16"
 
 ## ls shortcuts & overwriting ls to exa
@@ -18,6 +18,7 @@ alias ll='exa -l  --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 ## general shortcuts
+alias vim='nvim'
 alias grep='grep --color=auto'
 alias ping='ping -c 3'
 #alias bat='cat /sys/class/power_supply/BAT0/capacity'
@@ -34,9 +35,9 @@ alias g='git'
 
 ## pacman commands
 alias sp='pacman -Ss'
-alias update='doas pacman -Syu'
-alias force='doas pacman -Syyu'
-alias dl='doas pacman -S'
+alias update='sudo pacman -Syu'
+alias force='sudo pacman -Syyu'
+alias dl='sudo pacman -S'
 alias yayup='yay -Sua'
 alias unlock='sudo rm /var/lib/pacman/db.lck'
 
