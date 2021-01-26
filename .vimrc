@@ -14,15 +14,15 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap < <><left>
-inoremap > <><left>
-"""inoremap {<CR> {<CR>}<ESC>O
-"""inoremap {;<CR> {<CR>};<ESC>O
+" inoremap " ""<left>
+" inoremap ' ''<left>
+" inoremap ( ()<left>
+" inoremap [ []<left>
+" inoremap { {}<left>
+" inoremap < <><left>
+" inoremap > <><left>
+""inoremap {<CR> {<CR>}<ESC>O
+""inoremap {;<CR> {<CR>};<ESC>O
 
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -36,21 +36,25 @@ cnoreabbrev Q q
 cnoreabbrev Qall qall
 
 call plug#begin('~/.vim/plugged')
-Plug 'rakr/vim-one'
+""Plug 'rakr/vim-one'
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 Plug 'ludwig/split-manpage.vim'
-Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-Plug 'eagletmt/neco-ghc'
-Plug 'dag/vim2hs'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pbrisbin/vim-syntax-shakespeare'
 Plug 'vim-scripts/grep.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-capslock'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 call plug#end()
 
-colorscheme one
-set background=dark
-if (has("termguicolors"))
-    set termguicolors
-  endif
+""colorscheme one
+""set background=dark
+""if (has("termguicolors"))
+""    set termguicolors
+""  endif
 
 """ Workman Keybinds
     noremap y h
