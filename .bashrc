@@ -8,8 +8,11 @@
 [[ $- != *i* ]] && return
 
 export HISTCONTROL=ignoredups:erasedups
-export EDITOR='nvim'
-export MAKEFLAGS="-j17 -l16"
+export EDITOR='vim'
+export MAKEFLAGS="-j3 -l2"
+
+## tt quotes categories
+export wiz='/home/wizard/tt/quotes/wiz'
 
 ## ls shortcuts & overwriting ls to exa
 alias ls='exa -la --color=always --group-directories-first'
@@ -18,28 +21,20 @@ alias ll='exa -l  --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 ## general shortcuts
-alias vim='nvim'
+alias vim='vim'
 alias grep='grep --color=auto'
 alias ping='ping -c 3'
 #alias bat='cat /sys/class/power_supply/BAT0/capacity'
-alias sn='sudo shutdown now'
-alias sr='sudo reboot'
+alias sn='doas shutdown -h now'
+alias sr='doas shutdown -r now'
 alias top='htop'
 alias df='df -h'
-alias free='free -m'
-alias fmpv='mpv --fs'
-alias play='mpv --no-video'
+alias play='mpv --fs'
+alias nmpv='mpv --no-video'
 alias dlmp3='youtube-dl --extract-audio --audio-format mp3'
 alias gpgkey='gpg --list-secret-keys --keyid-format LONG'
 alias g='git'
-
-## pacman commands
-alias sp='pacman -Ss'
-alias update='sudo pacman -Syu'
-alias force='sudo pacman -Syyu'
-alias dl='sudo pacman -S'
-alias yayup='yay -Sua'
-alias unlock='sudo rm /var/lib/pacman/db.lck'
+alias ttq='tt -quotes'
 
 ## git shortcuts
 # alias clone='git clone'
@@ -71,6 +66,16 @@ alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
 
 PS1="\[\e[33m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[35m\]\h\[\e[m\] \[\e[m\]\W\[\e[m\]\[\e[33m\]]\[\e[m\]\[\e[32m\]\\$\[\e[m\] "
+
+## The Magical Directory Jumper
+fd() {
+ local dir
+ dir=$(find ${1:-.} -path '*/\.*' -prune \
+ -o -type d -print 2> /dev/null | fzf +m) &&
+ cd "$dir"
+	}
+
+alias fdr="fd /"
 
 ## The Magical Archive Extractor
 ex ()

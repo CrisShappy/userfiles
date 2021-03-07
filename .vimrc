@@ -32,42 +32,21 @@ cnoreabbrev Wa wa
 cnoreabbrev wQ wq
 cnoreabbrev WQ wq
 cnoreabbrev W w
-cnoreabbrev Q q
+cnoreabbrev Q q!
 cnoreabbrev Qall qall
 
-call plug#begin('~/.vim/plugged')
-""Plug 'rakr/vim-one'
-Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
-Plug 'ludwig/split-manpage.vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'pbrisbin/vim-syntax-shakespeare'
-Plug 'vim-scripts/grep.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-capslock'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-call plug#end()
-
-""colorscheme one
-""set background=dark
-""if (has("termguicolors"))
-""    set termguicolors
-""  endif
-
-""" Workman Keybinds
-    noremap y h
+""" ColemakDH Keybinds
+    noremap m h
     noremap n j
     noremap e k
-    noremap o l
-    noremap j y
-    noremap h e
-    noremap H E
-    noremap l o
-    noremap L O
+    noremap i l
+    noremap h i
+    noremap H I
     noremap k n
     noremap K N
+	noremap j e
+	noremap J E
+	noremap z m
 
 """ Scroll down/up
     noremap <C-N>  <C-E>
