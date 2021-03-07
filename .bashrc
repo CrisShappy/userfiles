@@ -21,7 +21,7 @@ alias ll='exa -l  --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 ## general shortcuts
-alias vim='vim'
+alias vi='vim'
 alias grep='grep --color=auto'
 alias ping='ping -c 3'
 #alias bat='cat /sys/class/power_supply/BAT0/capacity'
