@@ -35,20 +35,6 @@ alias gpgkey='gpg --list-secret-keys --keyid-format LONG'
 alias g='git'
 alias ttq='tt -quotes'
 
-## git shortcuts
-# alias clone='git clone'
-# alias pull='git pull origin'
-# alias push='git push origin'
-# alias commit='git commit -m'
-# alias checkout='git checkout'
-# alias fetch='git fetch'
-# alias branch='git branch'
-# alias status='git status'
-# alias tag='git tag'
-# alias add='git add'
-# alias addup='git add -u'
-# alias addall='git add .'
-
 ## find top RAM eaters
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
