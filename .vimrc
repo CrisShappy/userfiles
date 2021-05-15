@@ -10,9 +10,9 @@ autocmd BufWritePre * %s/\s\+$//e
 set wildmode=longest,list,full
 
 """ Setting Tab Behavior
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+"set shiftwidth=4
+"set softtabstop=4
+"set tabstop=4
 
 " inoremap " ""<left>
 " inoremap ' ''<left>

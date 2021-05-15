@@ -11,6 +11,8 @@ export HISTCONTROL=ignoredups:erasedups
 export EDITOR='vim'
 export MAKEFLAGS="-j3 -l2"
 
+set -o vi
+
 ## tt quotes categories
 export wiz='/home/wizard/tt/quotes/wiz'
 
@@ -21,6 +23,7 @@ alias ll='exa -l  --color=always --group-directories-first'
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 
 ## general shortcuts
+alias g='git'
 alias grep='grep --color=auto'
 alias ping='ping -c 3'
 #alias bat='cat /sys/class/power_supply/BAT0/capacity'
@@ -30,10 +33,11 @@ alias top='htop'
 alias df='df -h'
 alias play='mpv --fs'
 alias nmpv='mpv --no-video'
-alias dlmp3='youtube-dl --extract-audio --audio-format mp3'
+alias yta='youtube-dl --extract-audio --audio-format best'
+alias ytv='youtube-dl -f bestvideo+bestaudio'
 alias gpgkey='gpg --list-secret-keys --keyid-format LONG'
-alias g='git'
 alias ttq='tt -quotes'
+alias z='zathura'
 
 ## find top RAM eaters
 alias psmem='ps auxf | sort -nr -k 4'
@@ -61,32 +65,6 @@ fd() {
 	}
 
 alias fdr="fd /"
-
-## The Magical Archive Extractor
-ex ()
-{
-	if [ -f $1 ] ; then
-	case $1 in
-		*.tar.bz2)   tar xjf $1   ;;
-		*.tar.gz)    tar xzf $1   ;;
-		*.bz2)       bunzip2 $1   ;;
-		*.rar)       unrar x $1   ;;
-		*.gz)        gunzip $1    ;;
-		*.tar)       tar xf $1    ;;
-		*.tbz2)      tar xjf $1   ;;
-		*.tgz)       tar xzf $1   ;;
-		*.zip)       unzip $1     ;;
-		*.Z)         uncompress $1;;
-		*.7z)        7z x $1      ;;
-		*.deb)       ar x $1      ;;
-		*.tar.xz)    tar xf $1    ;;
-		*.tar.zst)   unzstd $1    ;;
-		*)           echo "'$1' cannot be extracted via ex()" ;;
-	esac
-	else
-		echo "'$1' is not a valid file"
-	fi
-}
 
 echo -E " (\.   \      ,/)"
 echo -E "  \(   |\     )/"
