@@ -45,7 +45,6 @@ cnoreabbrev Qall qall
     noremap k n
     noremap K N
 	noremap j e
-	noremap J E
 	noremap z m
 
 """ Scroll down/up
